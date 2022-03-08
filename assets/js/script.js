@@ -254,3 +254,5 @@ $(document).ready(function() {
   </div>`)
   })
 });
+
+require("bootstrap");
