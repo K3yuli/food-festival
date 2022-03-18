@@ -3,6 +3,10 @@ const path = require("path");
 // 
 const webpack = require("webpack");
 
+// import webpack-bundle-analyzer
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+
+
 // for basic configuration - provide webpack with 
 // three properties: entry, output, and mode
 
@@ -18,6 +22,9 @@ module.exports = {
               $: "jquery",
               jQuery: "jquery"
             }),
+            new BundleAnalyzerPlugin({
+              analyzerMode: "static", //the report outputs to an HTML file in the dist folder
+            })
     ],
 
 mode: 'development'
